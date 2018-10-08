@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>提现</title>
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body class="body-bg p-bto">
+<div class="wrap">
+    <div class="withdraw-deposit-bar">
+        <div class="container pb-0">
+            <div class="deposit-bar">
+                <h2>提现金额</h2>
+                <label class="form-input big border bto before-text">
+                    <em>￥</em>
+                    <input type="number" value="" placeholder="最多输入小数点后两位" id="depositInput"/>
+                </label>
+                <label class="tips">
+                    <span class="tc-999">可提现金额 <em id="deposit">100.25</em> 元</span>
+                    <a class="fr tc-main" href="javascript:;" id="wdDepositBtn">全部提现</a>
+                </label>
+            </div>
+        </div>
+        <div class="container mt-15 pl-15 pr-15 pt-5 pb-5">
+            <div class="deposit-form-bar">
+                <!--设置了密码去掉"not-setting"-->
+                <!--没有设置了密码加上"not-setting"-->
+                <div class="item not-setting">
+                    <span>提现密码</span>
+                    <label class="input"><input type="password" value="" placeholder="请输入提现密码"></label>
+                    <a class="btn" href="javascript:;">去设置</a>
+                </div>
+                <div class="item">
+                    <span class="line">提现密码</span>
+                    <label>
+                        <select>
+                            <option value="0" selected>请选择</option>
+                            <option value="1">建设银行</option>
+                            <option value="2">工商银行</option>
+                            <option value="3">招商银行</option>
+                            <option value="4">中国银行</option>
+                        </select>
+                        <em></em>
+                    </label>
+                </div>
+                <div class="item">
+                    <span>银行卡号</span>
+                    <label><input type="password" value="" placeholder="请输入银行卡号"></label>
+                </div>
+                <div class="item pl-0 pr-0 mt-30">
+                    <a class="fb-btn big radius" href="##">确定</a>
+                </div>
+            </div>
+        </div>
+        <div class="tips-bar tc-666 fs-12">
+            提现说明： <br>
+            1、收款账号实名信息需与鹿鸣保注册实名信息一致， 否则无法提现 <br>
+            2、每月16日至30日可申请上月推广费提现
+        </div>
+    </div>
+</div>
+<a class="fixed" href="提现记录.html">提现记录</a>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function () {
+        var $deposit = $("#deposit");
+        var $depositInput = $("#depositInput");
+        var $wdDepositBtn = $("#wdDepositBtn");
+        $wdDepositBtn.click(function () {
+            var _deposit = $deposit.text();
+            $depositInput.val(_deposit);
+        });
+    })
+</script>
+</body>
+</html>

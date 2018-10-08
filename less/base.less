@@ -1,0 +1,240 @@
+@import "_variable";
+@import (reference) "_position";
+@import (reference) "_module";
+
+.body-bg {
+  background: @body;
+}
+
+.wrap {
+  .p-rel;
+  .d-width;
+}
+
+.tips-bar {
+  .d-width;
+  padding: 15px;
+  > .container {
+    background: @white;
+    .border-radius(5px);
+    padding: 15px;
+    text-align: center;
+    > label {
+      .d-width;
+      margin: 30px 0 15px 0;
+      img {
+        .d-block;
+        width: 122px;
+        margin: auto;
+      }
+    }
+    > span {
+      .d-width;
+      color: @main;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    > em {
+      .d-width;
+      color: #c6c6c6;
+      font-size: @fs-12;
+    }
+    > a {
+      .d-width;
+      margin: 40px 0 20px 0;
+    }
+  }
+}
+
+.withdraw-deposit-bar {
+  .p-rel;
+  .d-width;
+  padding: 15px;
+  > .container {
+    .d-width;
+    .border-radius(5px);
+    .fn-box-shadow(2px 2px 3px rgba(0, 0, 0, 0.05));
+    background: @white;
+    padding: 15px 30px;
+
+    .deposit-bar {
+      .d-width;
+      h2 {
+        font-size: @fs-16;
+        color: @g-333;
+      }
+      .tips {
+        .d-width;
+        .text-mid-line(40px);
+      }
+    }
+  }
+}
+
+.deposit-form-bar {
+  .p-rel;
+  .d-width;
+  .item {
+    .p-rel;
+    width: 100%;
+    padding: 0 15px;
+    margin: 15px 0;
+    .border-radius(30px);
+    background: #ededed;
+    .text-mid-line(50px);
+    .d-flex;
+    .flex-direction(row);
+    .flex-justify(space-between);
+    .flex-align(center);
+    &.not-setting {
+      background: transparent;
+      .flex-justify(flex-start);
+      label.input {
+        .d-none;
+      }
+
+      a.btn {
+        .d-block;
+        padding-left: 15px;
+        color: @main;
+      }
+    }
+
+    span {
+      .d-block;
+      font-size: @fs-14;
+      width: 75px;
+      .text-mid-line(20px);
+      &.line {
+        border-right: 1px solid #c6c6c6;
+      }
+    }
+
+    label.input {
+      .d-block;
+    }
+
+    a.btn {
+      .d-none;
+    }
+
+    label {
+      .p-rel;
+      .flex-width(1);
+      padding-left: 15px;
+      em {
+        .abs-t-mid-r;
+        margin: -4px 0 0 0;
+        .fn-arrow-dir(8px, #c6c6c6 transparent transparent transparent);
+        &:after {
+          content: "";
+          .abs-tl-mid;
+          margin: -10px 0 0 -8px;
+          .fn-arrow-dir(8px, #ededed transparent transparent transparent);
+        }
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      margin-top: -2px;
+    }
+
+    select, input {
+      background: transparent;
+      border: 0 none;
+      .d-width;
+    }
+  }
+}
+
+.info-list-bar {
+  .p-rel;
+  .d-width;
+  ul {
+    .d-width;
+    background: @white;
+    padding: 0 15px;
+    li {
+      border-bottom: 1px solid #e6e6e6;
+      .d-flex;
+      .flex-direction(row);
+      .flex-justify(space-between);
+      .flex-align(center);
+      padding: 15px 0;
+      &:last-child {
+        border-bottom: 0 none;
+      }
+
+      label {
+        font-size: @fs-14;
+        &:first-child {
+          .d-block;
+          width: 80px;
+          span, em {
+            .d-width;
+          }
+          em {
+            font-size: @fs-12;
+            color: @g-999;
+            margin-top: 3px;
+          }
+        }
+
+        &:nth-child(2) {
+          .flex-width(1);
+          padding: 0 10px;
+        }
+
+        &:last-child {
+          .d-block;
+          width: 100px;
+          font-size: @fs-16;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.p-bto {
+    padding-bottom: 58px;
+  }
+}
+
+.fixed {
+  .p-fixed;
+  bottom: 0;
+  left: 0;
+  .d-width;
+  .tm-center;
+  color: @main;
+  font-size: @fs-13;
+  padding: 20px 0;
+  background: #ededed;
+}
+
+#wrapper {
+  .p-abs;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .d-width;
+  min-width: 320px;
+  overflow: hidden;
+  z-index: 1;
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+  .user-select(none);
+  .text-size-adjust(none);
+
+  .pull-loading {
+    .tm-center;
+    .text-mid-line(40px);
+    .d-flex;
+    .flex-align(center);
+    .flex-justify(center);
+  }
+}

@@ -1,0 +1,91 @@
+//颜色值
+@black: #000;
+@white: #FFF;
+@g-333: #333;
+@g-666: #666;
+@g-999: #999;
+@g-eee: #eee;
+@g-ccc: #ccc;
+@g-ddd: #ddd;
+@g-e4e4: #e4e4e4;
+@g-f2f2: #f2f2f2;
+@g-f5f5: #f5f5f5;
+@red: #ff0000;
+@yellow: #ffff00;
+@greed: #00ff00;
+@blue: #0000ff;
+
+@error-color: #ff5e5e;
+@success-color: #008000;
+@waring-color: #c6b200;
+
+@main: #4189ff;
+@body: #ededed;
+
+//尺寸
+@zero: 0;
+@base: 1px;
+@5px: @base*5;
+@8px: @base*8;
+@10px: @base*10;
+@15px: @base*15;
+@20px: @base*20;
+@25px: @base*25;
+@30px: @base*30;
+
+//杂项
+@img-path: "../img";
+@px: ~"px";
+@rem: ~"rem";
+@border-string: "top", "bottom", "left", "right", "none";
+@mid: percentage(0.5);
+@dir-string: "top", "bottom", "left", "right", "all";
+@font-path: "../fonts/";
+@font-name: "glyphicons-halflings-regular";
+
+//字体
+@font-family-Helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-GB: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+@font-family-SongTi: "宋体", arial, helvetica, sans-serif;
+@font-family-YaHei: "微软雅黑", arial, helvetica, sans-serif;
+@font-family-HeiT: "黑体", arial, helvetica, sans-serif;
+@font-family-Arial: Arial, sans-serif;
+@fs-base: 10px;
+@fs-10: @fs-base;
+@fs-11: @fs-base+1;
+@fs-12: @fs-base+2;
+@fs-13: @fs-base+3;
+@fs-14: @fs-base+4;
+@fs-15: @fs-base+5;
+@fs-16: @fs-base+6;
+@fs-17: @fs-base+7;
+@fs-18: @fs-base+8;
+@fs-19: @fs-base+9;
+@fs-20: @fs-base+10;
+
+//屏幕尺寸-模拟bootstrap
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-phone: @screen-xs-min;
+@screen-sm: 768px;
+@screen-sm-min: @screen-sm;
+@screen-tablet: @screen-sm-min;
+@screen-md: 992px;
+@screen-md-min: @screen-md;
+@screen-desktop: @screen-md-min;
+@screen-lg: 1200px;
+@screen-lg-min: @screen-lg;
+@screen-lg-desktop: @screen-lg-min;
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@grid-columns: 12;
+@grid-gutter-width: 30px;
+@grid-float-breakpoint: @screen-sm-min;
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+@container-tablet: (720px + @grid-gutter-width);
+@container-sm: @container-tablet;
+@container-desktop: (940px + @grid-gutter-width);
+@container-md: @container-desktop;
+@container-large-desktop: (1140px + @grid-gutter-width);
+@container-lg: @container-large-desktop;
